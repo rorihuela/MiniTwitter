@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.concurrent.TimeUnit;
 
 public class Client extends User implements Observer, Information {
+	//Two new long data types for creation time and updated time
 	private String identification;
 	private DefaultListModel<Observer> followers = new DefaultListModel<>();
 	private DefaultListModel<Information> following = new DefaultListModel<>();
@@ -64,6 +65,7 @@ public class Client extends User implements Observer, Information {
 		followers.addElement(a);
 	}
 	
+	//New setters
 	public void setCreationTime(){
 		this.creationTime = System.currentTimeMillis();
 	}
@@ -104,10 +106,12 @@ public class Client extends User implements Observer, Information {
 		return this.getID();
 	}
 	
+	//New getters
 	public long getCreationTime() {
 		return creationTime;
 
 	}
+	
 	public long getUpdateTime() {
 		return lastUpdate;
 

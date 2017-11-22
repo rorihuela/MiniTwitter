@@ -259,6 +259,7 @@ public class AdminGui extends JFrame {
 		PopUp p = new PopUp();
 
 		public void actionPerformed(ActionEvent e) {
+			//New methods implemented for creating user and usergroup, now creates pop up with time created.
 			User selectedNode = getUser(AdminGui.getInstance().getTree());
 
 			if (e.getSource() == getAddGroup()) {
@@ -313,6 +314,7 @@ public class AdminGui extends JFrame {
 					JavaTree.invite(words);
 					p.infoBox(words.getPercentage(), "Percent of Positive Words");
 				} else if (e.getSource() == AdminGui.getInstance().getNoDuplicates()) {
+					//Simply prints our no duplicates, because there is a duplicate checker that was implemented previously
 					p.infoBox("Currently no duplicates", "No Duplicate Verification");
 				} else if (e.getSource() == AdminGui.getInstance().getmostRecent()) {
 					RecentUpdate recent = new RecentUpdate();

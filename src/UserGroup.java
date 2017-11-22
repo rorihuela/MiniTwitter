@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 //Part Of Composite Design Pattern
 public class UserGroup extends User {
+	//Added long data type with to save creation time
 	private String identification;
 	private ArrayList<Client> groupUser = new ArrayList<>();
 	private long creationTime;
@@ -31,6 +32,7 @@ public class UserGroup extends User {
 
 	}
 
+	//New methods implemented
 	public void setCreationTime(){
 		this.creationTime = System.currentTimeMillis();
 	}
