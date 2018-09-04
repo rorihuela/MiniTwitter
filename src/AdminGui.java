@@ -312,7 +312,7 @@ public class AdminGui extends JFrame {
 				} else if (e.getSource() == AdminGui.getInstance().getSeePercentage()) {
 					Positive words = new Positive();
 					JavaTree.invite(words);
-					p.infoBox(words.getPercentage(), "Percent of Positive Words");
+					p.infoBox(words.getPercentage() , "Percent of Positive Words");
 				} else if (e.getSource() == AdminGui.getInstance().getNoDuplicates()) {
 					//Simply prints our no duplicates, because there is a duplicate checker that was implemented previously
 					p.infoBox("Currently no duplicates", "No Duplicate Verification");
