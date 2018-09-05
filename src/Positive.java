@@ -9,6 +9,7 @@ public class Positive implements Visitor {
 
 	private int numPositive = 0;
 	private int numWords = 0;
+	private int percent = 0;
 
 	String[] positiveWordsList = { "happy", "fantastic", "positive", "good", "great", "awesome", "amazing", "fantastic",
 			"beautiful", "nice", "cute" };
@@ -37,13 +38,15 @@ public class Positive implements Visitor {
 				words.remove(positive);
 				numPositive++;
 			}
-
 		}
+		percent = (int)(numPositive * 100.0f)/ (numWords/2);
+		System.out.print(numWords + " " + numPositive + " " + percent);
 	}
 	
 	public int getPercentage() {
-		if (numWords > 0)
-			return numPositive*100/numWords;
+		if (numWords > 0 && numPositive > 0) {
+			return percent;
+		}
 		PopUp a = new PopUp();
 		a.infoBox("Unable to retreive percentage", "Error");
 		return 0;
