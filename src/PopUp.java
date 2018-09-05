@@ -4,8 +4,8 @@
 import javax.swing.JOptionPane;
 
 public class PopUp {
-	public void infoBox(float f, String titleBar) {
-		JOptionPane.showMessageDialog(null, f, "InfoBox: " + titleBar, JOptionPane.INFORMATION_MESSAGE);
+	public void infoBox(int i, String titleBar) {
+		JOptionPane.showMessageDialog(null, i, "InfoBox: " + titleBar, JOptionPane.INFORMATION_MESSAGE);
 
 	}
 
